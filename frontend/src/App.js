@@ -11,7 +11,7 @@ const App =() =>{
     }, []);
  
     const getData = async () => {
-        const response = await axios.get('http://localhost:8000');
+        const response = await axios.get('http://localhost:8000/');
         setData(response.data);
     }
 
