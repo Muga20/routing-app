@@ -9,6 +9,24 @@ port = process.env.PORT
 
 app.use(cors())
 
+app.get('/users', (req, res) => {
+  res.json(users)
+});
+const users=[{
+  "id": "1",
+  "name" : "Mark John",
+  "email" :"markjohn@gmail.com",
+  "age"  :"22"
+
+},
+{
+  "id": "2",
+  "name" : "Sheila Anne",
+  "email" :"sheila@gmail.com",
+  "age"  :"20" 
+}
+];
+
 app.get('/', (req, res) => {
   res.send('hello world')
 })
