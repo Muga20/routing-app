@@ -1,9 +1,28 @@
 
 import './App.css';
-import React, { useEffect,useState,axios } from 'react'
+import React, { useEffect,useState } from 'react'
+import axios from 'axios';
 
 const App =() =>{
- 
+
+  const userS=[{
+    "id": "1",
+    "name" : "Mark John",
+    "email" :"markjohn@gmail.com",
+    "age"  :"22"
+  
+  },
+  {
+    "id": "1",
+    "name" : "Mark John",
+    "email" :"markjohn@gmail.com",
+    "age"  :"22" 
+  }
+  ];
+
+  const [users,setUsers]=useState([]);
+
+
     const [data, setData ] = useState([]);
  
     useEffect(() => {
@@ -18,10 +37,10 @@ const App =() =>{
   
   return (
     <div className="App">
-     {data.map((myData) => {
-      <h1>{myData.res}</h1>
-     })}
-
+        {data}
+        <div>
+  
+</div>
     </div>
   );
 }
